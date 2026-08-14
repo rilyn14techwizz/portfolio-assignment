@@ -1,0 +1,91 @@
+/*Font Oswald and Montserrat from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Creates global CSS variables that can be reused
+throughout the file*/
+:root{
+    --main-color: rgb(255, 204, 204);
+    --main-color-accent: rgb(0, 153, 255);
+    --main-color-transparent: rgb(51, 102, 153);
+    --secondary-color: rgb(0, 0, 0);
+    --accent-color: rgb(36, 36, 36);
+    --accent-text-color: rgb(255, 255, 255);
+    --main-font-family: 'Oswald', sans-serif;
+}
+
+body{
+    background-image: url(../Images/shelves.jpg);
+    background-size 100%;
+
+}
+
+/*NAVBAR*/
+
+.navbar{
+    background-color: var(--secondary-color);
+    border-bottom: 5px solid rgb(36, 36, 36);
+    height: 100px;
+}
+
+/*Affects the title in the navbar PORTFOLIO*/
+.navbar-brand{
+    color: var(--main-color-accent);
+    font-family: var(--main-font-family);
+    font-size: 45px;
+    padding-left: 30px;
+}
+
+.nav-link{
+    color: var(--main-color-accent);
+    font-family: var(--main-font-family);
+    font-size: 35px;
+}
+
+/*Affects the hover state of the links in the navbar*/
+.nav-link:hover{
+    color: var(--main-color-transparent);
+    text-shadow: 0 0 3px rgba(0, 0, 153, 0.6);
+}
+
+/*Sets the color of the link that has been clicked on 
+in other words the "active link"*/
+.nav-link:focus{
+    color: var(--accent-text-color);
+    text-shadow: 0 0 3px rgba(0, 0, 153, 0.6);
+}
+
+/*Sets up the styling for each link in
+the dropdown menu under the home button*/
+.dropdown-item{
+    color: var(--main-color);
+    font-family: var(--main-font-family);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px; /*Adds some space to the top of 
+    each link to center them*/
+    padding-bottom: 20px; /*Adds some space to the bottom
+    of each link to center them*/
+    border-bottom: 2px solid rgb(36, 36, 36);
+}
+
+/*Add this to custom.css*/
+.portfolio-heading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.thefuture img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-link{
+    text-decoration: underline;
+}
