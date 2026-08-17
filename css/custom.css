@@ -1,6 +1,7 @@
-/*Font Oswald and Montserrat from fonts.google.com*/
+/*Font Oswald, Montserrat, Yesteryear from fonts.google.com*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 
 /*Creates global CSS variables that can be reused
 throughout the file*/
@@ -16,7 +17,7 @@ throughout the file*/
 
 body{
     background-image: url(../Images/shelves.jpg);
-    background-size 100%;
+    background-size: 100%;
 
 }
 
@@ -78,7 +79,7 @@ the dropdown menu under the home button*/
     text-transform:uppercase;
 }
 
-.thefuture img{
+.the-future {
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -88,4 +89,71 @@ the dropdown menu under the home button*/
 
 .about-link{
     text-decoration: underline;
+}
+
+p{
+    color:#000000 !important;
+}
+
+/*Define the animation effect */
+@keyframes fadeInup {
+    from{
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Apply the animation to your elements*/
+.the-future, p {
+    display: inline-block;
+    animation: fadeInup 1.5s ease-out infinite !important;
+}
+
+.about {
+    background-color: #ffffff !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    margin: 20px auto !important;
+    max-width: 800px !important
+}
+
+/* Define the Color Changing Animations*/
+@keyframes backgroundGradient{
+    0% {background-color: #ffffff;}
+    50% {background-color: #f0f4f8;}
+    100% {background-color: #ffffff;}   
+}
+
+
+@keyframes textGradient {
+    0%{ color:#000000; }
+    50%{ color: #0d6efd;} /*Shifting to Bootstrap Blue */
+    100%{ color: #000000;}
+}
+/* Appply the animation to my element */
+.about{
+    animation: backgroundGradient 6s ease-in-out infinite !important;
+}
+.about-heading{
+    animation: textGradient 6s ease-in-out infinite !important;
+    font-weight: bold;
+}
+
+/*CONTACT FORM*/
+
+.form-control{
+    border: 3px solid var(--main-color);
+    transition: 1s ease;
+}
+
+/*Overrides Bootstrap's focus effect*/
+.form-control:focus{
+    color: #46505a;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0px .25rem var(--main-color-accent);
 }
