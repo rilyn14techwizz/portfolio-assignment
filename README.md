@@ -22,3 +22,4 @@ https://github.com/rilyn14techwizz/HTML--CSS-Projects/tree/main/Simple-Recipes
  * HTML
  * CSS and Custom Grid Design
  * Bootstrap 5 Framework
+ * javascript
